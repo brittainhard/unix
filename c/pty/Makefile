@@ -1,8 +1,9 @@
-CC = gcc
-EXE = a.out
-CFLAGS = -Wall -g
-DEPS = error.o
-HEADERS = apue.h
+CC= gcc
+EXE= a.out
+CFLAGS= -Wall -g
+SOURCE= pty.c
+DEPS= error.o
+HEADERS= apue.h
 
 program: $(DEPS) $(SOURCE)
 	$(CC) $(CFLAGS) $(SOURCE) -o $(EXE) $(DEPS)
