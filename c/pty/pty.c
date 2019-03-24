@@ -1,4 +1,4 @@
-#include <termios.h>
+#include "pty.h"
 
 #ifndef LINUX
 #define OPTSTR "+d:einv"
