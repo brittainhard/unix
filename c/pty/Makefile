@@ -2,8 +2,8 @@ CC= gcc
 EXE= pty
 TEST_EXE= a.out
 CFLAGS= -Wall -g
-SOURCE= pty.c
-DEPS= open.o fork.o error.o driver.o loop.o
+SOURCE= main.c
+DEPS= ptyopen.o ptyfork.o error.o driver.o loop.o
 
 all: clean pty
 test: clean test_exe
