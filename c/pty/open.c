@@ -1,4 +1,4 @@
-#include "open.h"
+#include "pty.h"
 
 int
 pytm_open(char *pts_name, int pts_namesz)
