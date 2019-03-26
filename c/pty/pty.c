@@ -13,7 +13,7 @@ main(int argc, char *argv[])
     struct winsize size;
 
     interactive = isatty(STDIN_FILENO);
-    ifnoreeof = 0;
+    ignoreeof = 0;
     noecho = 0;
     verbose = 0;
     driver = NULL;
@@ -28,7 +28,7 @@ main(int argc, char *argv[])
                 noecho = 1;
                 break;
             case 'i':
-                ifnoreeof = 1;
+                ignoreeof = 1;
                 break;
             case 'n':
                 interactive = 0;
@@ -61,7 +61,7 @@ main(int argc, char *argv[])
         if (noecho)
             set_noecho(STDIN_FILENO);
 
-        if (execvp(argv[optind], &arg[optind]) < 0)
+        if (execvp(argv[optind], &argv[optind]) < 0)
             err_sys("Can't execute: %s", argv[optind]);
     }
 
